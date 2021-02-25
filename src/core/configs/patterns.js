@@ -1,0 +1,87 @@
+/* eslint-disable no-undef */
+const MIN_PASSWORD_LENGTH = 1;
+const MAX_PASSWORD_LENGTH = 64;
+
+const MIN_PASSWORD_REGISTRATION_LENGTH = 8;
+const MAX_PASSWORD_REGISTRATION_LENGTH = 32;
+
+const MIN_FULLNAME_LENGTH = 1;
+const MAX_FULLNAME_LENGTH = 100;
+
+const MIN_NAME_LENGTH = 1;
+const MAX_NAME_LENGTH = 50;
+
+const MAX_EMAIL_LENGTH = 64;
+
+const MIN_SURNAME_LENGTH = 1;
+const MAX_SURNAME_LENGTH = 50;
+
+const MIN_PHONE_LENGHT = 4;
+const MAX_PHONE_LENGHT = 19;
+
+const MAX_MESSAGE_LENGHT = 255;
+
+const MAX_GIFTCARD_LENGTH = 64;
+
+const MIN_SEARCH_QUERY_LENGTH = 2;
+const SEARCH_MATERIALS_PER_PAGE = 10;
+
+const MAX_TICKET_NUMBER_LENGTH = 64;
+
+const MIN_DATE = '1900-01-01';
+const MAX_DATE = () => {
+  const date = new Date();
+
+  const month = date.getMonth() + 1;
+  const day = date.getDate();
+
+  return `${date.getFullYear()}-${month < 10 ? `0${month}` : month}-${day < 10 ? `0${month}` : day}`;
+};
+
+const MAX_FILE_SIZE = 2;
+
+const PATTERN_SURNAME = new RegExp(`^[А-Яа-яA-Za-z -]{${MIN_SURNAME_LENGTH},${MAX_SURNAME_LENGTH}}$`);
+const PATTERN_FULLNAME = new RegExp(`^[А-Яа-яA-Za-z ,."'-]{${MIN_FULLNAME_LENGTH},${MAX_FULLNAME_LENGTH}}$`);
+const PATTERN_NAME = new RegExp(`^[А-Яа-яA-Za-z -]{${MIN_NAME_LENGTH},${MAX_NAME_LENGTH}}$`);
+const PATTERN_EMAIL = new RegExp('^((?!\\.)[A-Za-z0-9!#$%&\'*+-/=?^_]*[^.])@([A-Za-z0-9-_.<>]+\\.*)\\.([A-Za-z]{2,})$');
+const PATTERN_PASSWORD = new RegExp(`^[А-Яа-яA-Za-z0-9!@#$%^&*()\-_=+{};:,<.>]{${MIN_PASSWORD_LENGTH},${MAX_PASSWORD_LENGTH}}$`);
+const PATTERN_PASSWORD_REGISTRATION = new RegExp(`^[А-Яа-яA-Za-z0-9!@#$%^&*()\-_=+{};:,<.>]{${MIN_PASSWORD_REGISTRATION_LENGTH},${MAX_PASSWORD_REGISTRATION_LENGTH}}$`);
+const PATTERN_PHONE_NUMBER = new RegExp(`(\\s*)?(\\+)?([- _():=+]?\\d[- _():=+]?){${MIN_PHONE_LENGHT},${MAX_PHONE_LENGHT}}(\\s*)?$`);
+const PATTERN_NATURAL_NUMBER = /^[0-9]{1,}$/;
+const PATTERN_BIRTHDAY = /^[0-9.]{10,10}$/;
+
+const FILES_FORMATS_DOCUMENTS = ['doc', 'docx', 'pdf'];
+
+export {
+  MIN_PASSWORD_LENGTH,
+  MAX_PASSWORD_LENGTH,
+  MIN_PASSWORD_REGISTRATION_LENGTH,
+  MAX_PASSWORD_REGISTRATION_LENGTH,
+  MIN_FULLNAME_LENGTH,
+  MAX_FULLNAME_LENGTH,
+  MIN_NAME_LENGTH,
+  MAX_NAME_LENGTH,
+  MAX_EMAIL_LENGTH,
+  MIN_SURNAME_LENGTH,
+  MAX_SURNAME_LENGTH,
+  MIN_PHONE_LENGHT,
+  MAX_PHONE_LENGHT,
+  PATTERN_SURNAME,
+  PATTERN_NAME,
+  PATTERN_EMAIL,
+  MAX_MESSAGE_LENGHT,
+  MAX_GIFTCARD_LENGTH,
+  MIN_SEARCH_QUERY_LENGTH,
+  SEARCH_MATERIALS_PER_PAGE,
+  MAX_TICKET_NUMBER_LENGTH,
+  MIN_DATE,
+  MAX_DATE,
+  PATTERN_PASSWORD,
+  PATTERN_PASSWORD_REGISTRATION,
+  PATTERN_PHONE_NUMBER,
+  PATTERN_FULLNAME,
+  PATTERN_NATURAL_NUMBER,
+  MAX_FILE_SIZE,
+  FILES_FORMATS_DOCUMENTS,
+  PATTERN_BIRTHDAY,
+};

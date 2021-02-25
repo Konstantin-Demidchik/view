@@ -1,0 +1,9 @@
+image: node:8.11.3
+
+pipelines:
+  default:
+    - step:
+        caches:
+          - node
+        script:
+          - npm install

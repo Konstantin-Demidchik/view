@@ -1,0 +1,217 @@
+[
+  {
+      "dataURL": "/wssite/webapi/pages/main",
+      "component": "MainPage",
+      "path": "/wssite/webapi/pages/main"
+  },
+  {
+      "dataURL": "/wssite/webapi/pages/info?subpage=visitors&subpage=news&subpage=",
+      "component": "OneNewsPage",
+      "path": "/info/visitors/news/:id"
+  },
+  {
+      "dataURL": "/wssite/webapi/pages/film/",
+      "component": "MovieFullPage",
+      "path": "/afisha/:movie"
+  },
+  {
+      "dataURL": "/wssite/webapi/pages/cinemas?subpage=minsk&subpage=arena",
+      "component": "ArenaPage",
+      "path": "/cinemas/minsk/arena/"
+  },
+  {
+      "dataURL": "/wssite/webapi/pages/cinemas?subpage=minsk&subpage=dana",
+      "component": "DanaPage",
+      "path": "/cinemas/minsk/dana/"
+  },
+  {
+      "dataURL": "/wssite/webapi/pages/cinemas?subpage=minsk&subpage=galileo",
+      "component": "GalileoPage",
+      "path": "/cinemas/minsk/galileo/"
+  },
+  {
+      "dataURL": "/wssite/webapi/pages/cinemas?subpage=more&subpage=freeparking",
+      "component": "FreeParking",
+      "path": "/cinemas/more/freeparking"
+  },
+  {
+      "dataURL": "/wssite/webapi/pages/products?subpage=cinema-bar&subpage=morozhennoe-i-slashi",
+      "component": "FoodPage",
+      "path": "/products/cinema-bar/morozhennoe-i-slashi"
+  },
+  {
+      "dataURL": "/wssite/webapi/pages/products?subpage=cinema-bar&subpage=sneki",
+      "component": "SnekiPage",
+      "path": "/products/cinema-bar/sneki"
+  },
+  {
+      "dataURL": "/wssite/webapi/pages/products?subpage=cinema-bar&subpage=deserts",
+      "component": "DesertsPage",
+      "path": "/products/cinema-bar/deserts"
+  },
+  {
+      "dataURL": "/wssite/webapi/pages/products?subpage=cinema-bar&subpage=napitki",
+      "component": "NapitkiPage",
+      "path": "/products/cinema-bar/napitki"
+  },
+  {
+      "dataURL": "/wssite/webapi/pages/info?subpage=about&subpage=vacancies",
+      "component": "VacanciesPage",
+      "path": "/info/about/vacancies"
+  },
+  {
+      "dataURL": "/wssite/webapi/pages/info?subpage=visitors&subpage=news",
+      "component": "NewsPage",
+      "path": "/info/visitors/news"
+  },
+  {
+      "dataURL": "/wssite/webapi/pages/info?subpage=visitors&subpage=ad",
+      "component": "PromotionsPage",
+      "path": "/info/visitors/ad/"
+  },
+  {
+      "dataURL": "/wssite/webapi/pages/info?subpage=visitors&subpage=ad&subpage=over",
+      "component": "PromotionsOverPage",
+      "path": "/info/visitors/ad/over/"
+  },
+  {
+      "dataURL": "/wssite/webapi/pages/afisha",
+      "component": "MovieAfishaPage",
+      "path": "/afisha"
+  },
+  {
+      "dataURL": "/",
+      "component": "DownloadTicketPage",
+      "path": "/ticket/download"
+  },
+  {
+      "dataURL": "/",
+      "component": "GiftCardInfoPage",
+      "path": "/giftcard"
+  },
+  {
+      "dataURL": "/wssite/webapi/pages/info?subpage=visitors&subpage=problem",
+      "component": "SorryCard",
+      "path": "/info/visitors/problem"
+  },
+  {
+      "dataURL": "/wssite/webapi/pages/info?subpage=visitors&subpage=giftcards",
+      "component": "GiftCards",
+      "path": "/info/visitors/giftcards/"
+  },
+  {
+      "dataURL": "/wssite/webapi/pages/info?subpage=cooperation&subpage=advertising",
+      "component": "AdvertisingPage",
+      "path": "/info/cooperation/advertising/"
+  },
+  {
+      "dataURL": "/wssite/webapi/pages/search",
+      "component": "SearchPage",
+      "path": "/search"
+  },
+  {
+      "dataURL": "/wssite/webapi/pages/tab?subpage=rcc",
+      "component": "ProfilePage",
+      "path": "/my"
+  },
+  {
+      "dataURL": "/wssite/webapi/pages/cinemas?subpage=advantages&subpage=advantages",
+      "component": "AdvantagesPage",
+      "path": "/cinemas/advantages/advantages"
+  },
+  {
+      "dataURL": "/wssite/webapi/pages/cinemas?subpage=more&subpage=silverglasses",
+      "component": "GlassesPage",
+      "path": "/cinemas/more/silverglasses"
+  },
+  {
+      "dataURL": "/wssite/webapi/pages/cinemas?subpage=minsk&subpage=arena",
+      "component": "CinemaPage",
+      "path": "/cinemas/*"
+  },
+  {
+      "dataURL": "/wssite/webapi/pages/rcc?subpage=start",
+      "component": "HowToBecomeAMemberPage",
+      "path": "/rcc/start"
+  },
+  {
+      "dataURL": "/wssite/webapi/pages/rcc?subpage=club",
+      "component": "AboutRedCarpetClub",
+      "path": "/rcc/club"
+  },
+  {
+      "dataURL": "/wssite/webapi/pages/products?subpage=cinema-bar&subpage=popkorn",
+      "component": "PopcornPromoPage",
+      "path": "/products/cinema-bar/popkorn"
+  },
+  {
+      "dataURL": "/wssite/webapi/pages/products?subpage=cinema-bar&subpage=healthy-food",
+      "component": "HealthyFood",
+      "path": "/products/cinema-bar/healthy-food"
+  },
+  {
+      "dataURL": "/wssite/webapi/pages/info?subpage=cooperation&subpage=renthall",
+      "component": "RentalPage",
+      "path": "/info/cooperation/renthall"
+  },
+  {
+      "dataURL": "/wssite/webapi/pages/rcc?subpage=advantages",
+      "component": "RegistrationAdvantagesPage",
+      "path": "/rcc/advantages"
+  },
+  {
+      "dataURL": "/wssite/webapi/pages/info?subpage=about&subpage=career",
+      "component": "CareerPage",
+      "path": "/info/about/career"
+  },
+  {
+      "dataURL": "/wssite/webapi/pages/info?subpage=about&subpage=contacts",
+      "component": "ContactsPage",
+      "path": "/info/about/contacts"
+  },
+  {
+      "dataURL": "/wssite/webapi/pages/info?subpage=visitors&subpage=age",
+      "component": "AgeCategoryFilmPage",
+      "path": "/info/visitors/age"
+  },
+  {
+      "dataURL": "/wssite/webapi/pages/info?subpage=visitors&subpage=prices",
+      "component": "TicketPricesPage",
+      "path": "/info/visitors/prices"
+  },
+  {
+      "dataURL": "/wssite/webapi/pages/info?subpage=visitors&subpage=returnticket",
+      "component": "ReturnTicketPage",
+      "path": "/info/visitors/returnticket"
+  },
+  {
+      "dataURL": "/wssite/webapi/pages/info?subpage=visitors&subpage=rules",
+      "component": "CinemaRules",
+      "path": "/info/visitors/rules"
+  },
+  {
+      "dataURL": "/wssite/webapi/pages/rcc?subpage=faq",
+      "component": "FaqPage",
+      "path": "/rcc/faq"
+  },
+  {
+      "dataURL": "/wssite/webapi/pages/rcc?subpage=rules",
+      "component": "RulesPage",
+      "path": "/rcc/rules/"
+  },
+  {
+      "dataURL": "/wssite/webapi/pages/info?subpage=visitors&subpage=ad&subpage=",
+      "component": "OnePromoPage",
+      "path": "/info/visitors/ad/:id"
+  },
+  {
+      "dataURL": "/wssite/webapi/pages/legal?subpage=offer",
+      "component": "LegalOfferPage",
+      "path": "/legal/offer"
+  },
+  {
+      "dataURL": "/wssite/webapi/pages/legal?subpage=terms",
+      "component": "LegalTermsPage",
+      "path": "/legal/terms"
+  }
+]

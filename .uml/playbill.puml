@@ -1,0 +1,127 @@
+@startuml
+package model {
+    class Film {
+        -name: str
+        -description: str
+        -logo: URL
+        -poster: URL
+        -trailer: URL
+        -dateFrom: Date
+        -dateTo: Date
+        -ageLimit: num
+        -rate: num
+        -genres: str[]
+        -duration: Time
+
+        +rate(num): void
+    }
+
+    class Cinema {
+        -name: str
+        -address: str
+    }
+
+    class Show {
+        -film: Film
+        -cinema: Cinema
+        -date: Date
+        -auditorium: num
+        -technologies: str[]
+    }
+
+    class ShowFilter {
+        -cinema: Cinema
+        -date: Date
+        -technologies: str[]
+        -seats: str[]
+        -language: str
+    }
+
+    class Playbill {
+        +view(ShowFilter): Show[]
+        +soon(void): Show[]
+        +special(void): Show[]
+    }
+
+    note top of Playbill
+        view(filter: ShowFilter) {
+            ...
+            return PlaybillGateway.get().search(filter);
+        }
+    end note
+
+    interface PlaybillGateway {
+        -{static} instance: PlaybillGateway
+        +{static} get(): PlaybillGateway
+        +{static} set(PlaybillGateway): void
+
+        +search(ShowFilter): Show[]
+    }
+
+    interface FilmGateway {
+        -{static} instance: FilmGateway
+        +{static} get(): PlaybillGateway
+        +{static} set(PlaybillGateway): void
+
+        +saveRate(num): void
+    }
+
+    Film --o Show
+    Cinema --o Show
+    Playbill --> PlaybillGateway : use search()
+    Film --> FilmGateway : use saveRate()
+    PlaybillGateway --* PlaybillGateway
+    FilmGateway --* FilmGateway
+}
+
+package data {
+    class PlaybillRESTGateway {
+        -serverUrl: URL
+        +search(ShowFilter): Show[]
+    }
+
+    class FilmRESTGateway {
+        -serverUrl: URL
+        +saveRate(num): void
+    }
+
+    PlaybillRESTGateway --|> PlaybillGateway
+    FilmRESTGateway --|> FilmGateway
+}
+note top of data: ajax calls goes here
+
+package view {
+    class PlaybillComponent {
+        +render()
+        +onSoonBtnClick()
+        +onViewBtnClick()
+        +onSpecialBtnClick()
+    }
+    note bottom of PlaybillComponent
+        onSoonBtnClick() {
+            ...
+            let Shows = this.playbill.soon();
+            this.setState({Shows: Shows});
+            ...
+        }
+    end note
+
+    PlaybillComponent o--> Playbill
+}
+note top of view: React components goes here
+
+class App {
+}
+
+note right of App
+    init() {
+        const serverUrl = ...
+        ...
+        PlaybillGateway.set(new PlaybillRESTGateway(serverUrl));
+        FilmGateway.set(new FilmRESTGateway(serverUrl));
+    }
+end note
+
+App --> PlaybillGateway
+App --> FilmGateway
+@enduml

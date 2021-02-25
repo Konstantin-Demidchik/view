@@ -1,0 +1,202 @@
+@import url('https://fonts.googleapis.com/css?family=Ubuntu:400,500,700&subset=cyrillic-ext');
+
+body {
+  margin: 0;
+  padding: 0;
+  color: rgba(255, 255, 255, .8);
+  font: 400 16px/26px Ubuntu, Roboto, Arial, Helvetica, sans-serif;
+  background: #27272a;
+  overflow-x: hidden;
+}
+
+*, ::after, ::before {
+  box-sizing: border-box;
+}
+
+::selection {
+    background: #1c9cdf;
+    color: #fff;
+}
+
+ul {
+  margin: 18px 0 18px 25px;
+  padding: 0;
+  font-size: 1em;
+  line-height: 1.625em;
+}
+
+/* @media all and (max-width: 1200px) {
+  ul{
+    font-size: 1em;
+    line-height: 1.625em;
+  }
+} */
+
+li {
+  margin: 0 0 8px;
+  padding: 0 0 0 25px;
+  position: relative;
+  list-style: none;
+  color: rgba(255, 255, 255, 0.8);
+  text-size-adjust: 100%;
+  font: 400 1em/1.625em Ubuntu,Roboto,Arial,Helvetica,sans-serif;
+}
+
+ul li:before {
+  content: '';
+  position: absolute;
+  top: 12px;
+  left: 0;
+  height: 2px;
+  width: 16px;
+  background: rgba(212, 7, 84, 0.8);
+}
+
+ol {
+  counter-reset: ol;
+  padding-inline-start: 25px;
+}
+
+ol li {
+  counter-increment: ol;
+}
+
+
+ol li:before {
+  content: counter(ol) '.';
+  position: absolute;
+  left: 0;
+  color: rgba(212,7,84,.8);
+  font-weight: 700;
+}
+
+a {
+  color: #1c9cdf;
+  cursor: pointer;
+  border: none;
+  transition: .2s;
+  outline: 0;
+  text-decoration: none;
+}
+
+a:link {
+  color: #1c9cdf;
+  text-decoration: none;
+}
+
+a:hover {
+  color: #d40754;
+}
+
+.mobile__pdf__container #viewerContainer .pdfViewer {
+    overflow: hidden!important;
+}
+
+.titleContainer .label {
+  padding-top: 20px;
+  padding-bottom: 35px;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 1300px;
+  display: block;
+}
+
+/* CAROUSEL */
+
+.custom-arrow-container {
+  opacity: 0.5;
+  height: 4em;
+  transition: .2s;
+}
+.react-multiple-carousel__arrow:hover .custom-arrow-container {
+  opacity: 1;
+}
+.react-multiple-carousel__arrow:active .custom-arrow-container {
+  opacity: 1;
+}
+
+.react-multiple-carousel__arrow {
+  position: absolute!important;
+  width: 64px!important;
+  height: 96px!important;
+  border-radius: 32px!important;
+  background: rgba(24,24,24,.8)!important;
+  color: rgba(255,255,255,.6)!important;
+  z-index: 10!important;
+  cursor: pointer!important;
+  transition: .2s!important;
+}
+
+
+.react-multiple-carousel__arrow {
+  min-height: 96px!important;
+  min-width: 55px!important;
+  background: rgba(24,24,24,.8)!important;
+  transition: .2s;
+}
+
+.react-multiple-carousel__arrow:active {
+  background: rgba(24,24,24, 1)!important;
+}
+
+.react-multiple-carousel__arrow:hover:before {
+  opacity: 1;
+  transition: .2s;
+}
+
+
+.react-multiple-carousel__arrow::before {
+  font-size: 46px!important;
+  opacity: 0.5;
+  transition: .2s;
+}
+
+.react-multiple-carousel__arrow--right:active:before {
+  -o-transform: translate(5px);
+  -ms-transform: translate(5px);
+  -moz-transform: translate(5px);
+  -webkit-transform: translate(5px);
+  transform: translate(5px);
+  transition: .2s;
+  opacity: 1;
+}
+
+.react-multiple-carousel__arrow--left:active:before {
+  -o-transform: translate(-5px);
+  -ms-transform: translate(-5px);
+  -moz-transform: translate(-5px);
+  -webkit-transform: translate(-5px);
+  transform: translate(-5px);
+  transition: .2s;
+  opacity: 1;
+}
+
+.react-multiple-carousel__arrow::before:active {
+  opacity: 1;
+}
+
+.react-multiple-carousel__arrow--left::before {
+  content:"\e824"
+}
+
+.react-multiple-carousel__arrow:hover {
+  opacity: 1;
+}
+
+.react-multiple-carousel__arrow--right {
+  margin-right: 150px !important;
+  top: 140px;
+}
+.react-multiple-carousel__arrow--left {
+  margin-left: 150px !important;
+  top: 140px;
+}
+
+@media (max-width: 759px) {
+  .react-multiple-carousel__arrow--right {
+    margin-right: 20px !important;
+  }
+  .react-multiple-carousel__arrow--left {
+    margin-left: 20px !important;
+  }
+}

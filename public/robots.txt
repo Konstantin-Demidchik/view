@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+Host: silverscreen.by
+Sitemap: https://silverscreen.by/sitemap.xml
